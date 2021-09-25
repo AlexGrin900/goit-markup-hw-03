@@ -40,22 +40,38 @@ body {
 	line-height: 1.71;
 }
 /*header */
-.header-container {
-	display: flex;
-}
+
 .container {
 	width: 1200px;
 	padding-left: 15px;
 	padding-right: 15px;
-	background-color: tomato;
 	margin: 0 auto;
 }
+.header-container {
+	display: flex;
+	align-items: center;
+}
+.site-nav {
+	display: flex;
+	align-items: center;
+}
+.nav-section {
+	display: flex;
+	align-items: center;
+}
+.link-nav:not(:last-child) {
+	margin-right: 50px;
+}
+
 .logo {
 	font-family: Raleway;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
 	color: var(--accent-color);
+	margin-right: 70px;
+	margin-top: 24px;
+	margin-bottom: 25px;
 }
 .logo-s {
 	color: var(--title-text-color);
@@ -73,8 +89,8 @@ body {
 .site-nav .link.current {
 	color: var(--accent-color);
 }
-.header-contacts {
-	margin-left: auto;
+.contacts-container {
+	margin-left: 331px;
 	display: flex;
 	align-items: center;
 }
@@ -83,6 +99,7 @@ body {
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--primary-text-color);
+	margin-right: 50px;
 }
 .link-phone {
 	font-weight: 500;
@@ -173,6 +190,7 @@ body {
 	background: var(--third-bcg-color);
 	border-radius: 4px;
 	cursor: pointer;
+	border-color: none;
 }
 .button:hover,
 .button:focus,
