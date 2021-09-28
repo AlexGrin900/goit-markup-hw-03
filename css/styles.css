@@ -14,6 +14,7 @@
 	--secondary-bcg-color: #f5f4fa;
 	--bcg-color: #2f303a;
 	--footer-text-color: rgba(255, 255, 255, 0.6);
+	--card-set-margin: 30px;
 }
 html {
 	box-sizing: border-box;
@@ -46,6 +47,10 @@ body {
 	letter-spacing: 0.03em;
 	font-size: 14px;
 	line-height: 1.71;
+}
+img {
+	display: flex;
+	max-width: 100%;
 }
 /*header */
 
@@ -255,8 +260,23 @@ body {
 .link-p {
 	color: inherit;
 }
-
+/* Portfolio-page */
+.portfolio {
+	padding-top: 100px;
+	padding-bottom: 94px;
+}
+.button-list {
+	display: flex;
+	width: 611px;
+	margin-left: 280px;
+	margin-bottom: 50px;
+	justify-content: space-between;
+}
+/* .button-item:not(:last-child) { */
+/* margin-right: 8px; */
+/* } */
 /*Buttons */
+
 .button {
 	padding: 6px 22px;
 	font-weight: 500;
@@ -275,6 +295,31 @@ body {
 .current-btn {
 	color: var(--white-color);
 	background: var(--accent-color);
+}
+
+.card-set {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(-1 * var(--card-set-margin));
+	margin-left: calc(-1 * var(--card-set-margin));
+}
+.card-set > .card-item {
+	flex-basis: calc(100% / 3 - var(--card-set-margin));
+	margin-top: var(--card-set-margin);
+	margin-left: var(--card-set-margin);
+}
+.card-content {
+	padding: 20px 24px;
+	border-left: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.card-text {
+	margin-top: 4px;
 }
 .footer-container {
 	padding-top: 60px;
