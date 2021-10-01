@@ -33,7 +33,10 @@ ul {
 }
 img {
 	display: block;
+	max-width: 100%;
+	height: auto;
 }
+
 body {
 	background: var(--white-color);
 	color: var(--primary-text-color);
@@ -42,10 +45,10 @@ body {
 	font-size: 14px;
 	line-height: 1.71;
 }
-img {
-	display: flex;
-	max-width: 100%;
+address {
+	font-style: normal;
 }
+
 /*header */
 
 .container {
@@ -53,6 +56,32 @@ img {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
+}
+.list {
+	list-style: none;
+}
+.link {
+	text-decoration: none;
+}
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+.visualy-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+.card-set {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: calc(-1 * var(--card-set-margin));
+	margin-left: calc(-1 * var(--card-set-margin));
 }
 .header {
 	border-bottom: 1px solid var(--border-color);
@@ -139,14 +168,7 @@ img {
 .contacts-link:focus {
 	color: var(--accent-color);
 }
-.list {
-	list-style: none;
-}
-.link {
-	text-decoration: none;
-	padding-top: 32px;
-	padding-bottom: 32px;
-}
+
 /* hero */
 .hero {
 	background: var(--bcg-color);
@@ -181,9 +203,9 @@ img {
 .work-container {
 	display: flex;
 }
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+
+.img-section {
+	padding-top: 0;
 }
 .section-title {
 	font-weight: bold;
@@ -192,16 +214,6 @@ img {
 	text-align: center;
 	color: var(--title-text-color);
 	margin-bottom: 50px;
-}
-.visualy-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-	border: 0;
-	clip: rect(0 0 0 0);
 }
 
 /* team section */
@@ -217,7 +229,7 @@ img {
 	margin-top: 30px;
 	margin-left: 30px;
 }
-img .team-img {
+.team-img {
 	margin-bottom: 30px;
 }
 .team-item {
@@ -228,9 +240,10 @@ img .team-img {
 	border-radius: 0px 0px 4px 4px;
 	text-align: center;
 	padding-bottom: 30px;
+	margin-bottom: 30px;
 }
 .name {
-	margin-top: 30px;
+	/* margin-top: 30px; */
 	margin-bottom: 4px;
 }
 
@@ -243,18 +256,11 @@ img .team-img {
 .title-text-section {
 	margin-bottom: 10px;
 }
-section .section .img-section {
-	padding-top: 0;
-}
 
 .job-list-item {
 	margin-left: 30px;
 	margin-top: 30px;
 	flex-basis: calc(100% / 3 - 30px);
-}
-img {
-	display: block;
-	height: auto;
 }
 
 /* work-list */
@@ -274,10 +280,6 @@ img {
 	color: inherit;
 }
 /* Portfolio-page */
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
 
 .button-list {
 	display: flex;
@@ -311,12 +313,6 @@ img {
 	border-radius: 4px;
 }
 
-.card-set {
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: calc(-1 * var(--card-set-margin));
-	margin-left: calc(-1 * var(--card-set-margin));
-}
 .card-set > .card-item {
 	flex-basis: calc(100% / 3 - var(--card-set-margin));
 	margin-top: var(--card-set-margin);
@@ -350,7 +346,4 @@ img {
 
 .address-item:not(:last-child) {
 	margin-bottom: 9px;
-}
-address {
-	font-style: normal;
 }
